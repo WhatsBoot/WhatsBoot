@@ -416,6 +416,116 @@
             color: #666;
         }
         
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+        
+        .popular-tag {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            color: var(--primary-darker);
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .promo-price {
+            font-size: 32px;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .pricing-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            border: 2px solid var(--primary);
+        }
+        
+        .pricing-button:hover {
+            background: transparent;
+            color: var(--primary);
+        }
+        
         /* Testimonials */
         .testimonials {
             background: var(--light);
@@ -722,6 +832,10 @@
                 padding: 15px 30px;
                 font-size: 16px;
             }
+            
+            .price {
+                font-size: 36px;
+            }
         }
     </style>
 </head>
@@ -738,10 +852,10 @@
                     <li><a href="#features">Recursos</a></li>
                     <li><a href="#benefits">Benefícios</a></li>
                     <li><a href="#opportunity">Para Quem</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#pricing">Planos</a></li>
                 </ul>
             </nav>
-            <a href="https://www.contate.me/whatsboot" class="cta-button">Experimente Grátis</a>
+            <a href="#pricing" class="cta-button">Experimente Grátis</a>
         </div>
     </header>
 
@@ -754,7 +868,7 @@
                 <p>Está cansado de perder tempo enviando mensagens uma por uma? Chegou a solução definitiva para turbinar suas vendas e alcançar milhares de pessoas com apenas alguns cliques!</p>
                 
                 <div class="hero-buttons">
-                    <a href="#cta" class="cta-button">Começar Agora</a>
+                    <a href="#pricing" class="cta-button">Começar Agora</a>
                     <a href="#features" class="cta-button" style="background: transparent; border: 2px solid var(--primary-darker); color: var(--primary-darker);">Ver Recursos</a>
                 </div>
                 
@@ -874,7 +988,7 @@
         <div class="benefits-content">
             <h2>Transforme seu WhatsApp em uma Máquina de Vendas</h2>
             <p>Com nossa ferramenta, você pode aumentar suas vendas, economizar tempo e expandir seu negócio de forma eficiente. Automatize seus processos e foque no que realmente importa: crescer seu negócio!</p>
-            <a href="#cta" class="cta-button">Quero Automatizar Minhas Vendas</a>
+            <a href="#pricing" class="cta-button">Quero Automatizar Minhas Vendas</a>
         </div>
     </section>
 
@@ -919,6 +1033,89 @@
                     <i class="fas fa-bullhorn"></i>
                     <h3>Vendedores</h3>
                     <p>Aumente seu alcance e feche mais negócios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Escolha o Melhor Plano para Você</h2>
+            <p class="section-subtitle">Planos acessíveis com todos os recursos para impulsionar seu negócio</p>
+            
+            <div class="pricing-cards">
+                <!-- Monthly Plan -->
+                <div class="pricing-card">
+                    <h3>Plano Mensal</h3>
+                    <div class="price">
+                        <div class="original-price">R$ 30,00</div>
+                        <div class="promo-price">R$ 25,00</div>
+                        <small>Promoção primeiro mês</small>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todos os recursos inclusos</li>
+                        <li>Suporte 24/7</li>
+                        <li>Atualizações gratuitas</li>
+                        <li>Sem limite de mensagens</li>
+                        <li>Sem fidelidade</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/gHCABTA" class="pricing-button">Assinar Agora</a>
+                </div>
+                
+                <!-- Quarterly Plan -->
+                <div class="pricing-card">
+                    <h3>Plano Trimestral</h3>
+                    <div class="price">
+                        <div class="original-price">R$ 90,00</div>
+                        <div class="promo-price">R$ 60,00</div>
+                        <small>Economize R$ 30,00</small>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todos os recursos inclusos</li>
+                        <li>Suporte prioritário</li>
+                        <li>Atualizações gratuitas</li>
+                        <li>Sem limite de mensagens</li>
+                        <li>Bônus: E-book de marketing</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/tO19FzK" class="pricing-button">Assinar Agora</a>
+                </div>
+                
+                <!-- Semi-annual Plan -->
+                <div class="pricing-card">
+                    <h3>Plano Semestral</h3>
+                    <div class="price">
+                        <div class="original-price">R$ 180,00</div>
+                        <div class="promo-price">R$ 100,00</div>
+                        <small>Economize R$ 80,00</small>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todos os recursos inclusos</li>
+                        <li>Suporte VIP</li>
+                        <li>Atualizações gratuitas</li>
+                        <li>Sem limite de mensagens</li>
+                        <li>Bônus: Curso WhatsApp Marketing</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/IZXVyQ0" class="pricing-button">Assinar Agora</a>
+                </div>
+                
+                <!-- Annual Plan -->
+                <div class="pricing-card">
+                    <div class="popular-tag">MAIS POPULAR</div>
+                    <h3>Plano Anual</h3>
+                    <div class="price">
+                        <div class="original-price">R$ 360,00</div>
+                        <div class="promo-price">R$ 180,00</div>
+                        <small>Economize 50%</small>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Todos os recursos inclusos</li>
+                        <li>Suporte VIP 24/7</li>
+                        <li>Atualizações gratuitas</li>
+                        <li>Sem limite de mensagens</li>
+                        <li>Bônus: Curso Completo + Consultoria</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/iBI7ASl" class="pricing-button">Assinar Agora</a>
                 </div>
             </div>
         </div>
@@ -978,7 +1175,7 @@
         <div class="cta-content">
             <h2>Transforme seu WhatsApp em uma máquina de vendas!</h2>
             <p>Não perca mais tempo com envios manuais. Comece hoje mesmo a automatizar sua comunicação e veja seus resultados decolarem!</p>
-            <a href="https://www.contate.me/5574981084870" class="cta-button-large">👉 Clique aqui e saiba mais agora!</a>
+            <a href="#pricing" class="cta-button-large">👉 Clique aqui e saiba mais agora!</a>
         </div>
     </section>
 
@@ -990,10 +1187,10 @@
                     <h3>WhatsBoot</h3>
                     <p>Soluções inteligentes para impulsionar seu negócio através do WhatsApp. Automatização eficiente e resultados reais.</p>
                     <div class="social-links">
-                        <a href="https://www.tiktok.com/@whatsboott"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/whats_boot/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.kwai.com/@delayfutebol"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.youtube.com/@whatsboott"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/whats_boot" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://k.kwai.com/u/@delayfutebol/" target="_blank"><i class="fab fa-kickstarter-k"></i></a>
+                        <a href="https://www.tiktok.com/@whatsboott" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 
@@ -1004,7 +1201,7 @@
                         <li><a href="#features">Recursos</a></li>
                         <li><a href="#benefits">Benefícios</a></li>
                         <li><a href="#opportunity">Para Quem</a></li>
-                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#pricing">Planos</a></li>
                     </ul>
                 </div>
                 
@@ -1022,8 +1219,8 @@
                 <div class="footer-column">
                     <h3>Contato</h3>
                     <ul>
-                        <li><a href="#"><i class="fas fa-envelope"></i> whatsboott@gmail.com</a></li>
-                        <li><a href="#"><i class="fas fa-phone"></i> (74) 98108-4870</a></li>
+                        <li><a href="mailto:whatsboott@gmail.com"><i class="fas fa-envelope"></i> whatsboott@gmail.com</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5574981084870"><i class="fab fa-whatsapp"></i> (74) 98108-4870</a></li>
                         <li><a href="#"><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</a></li>
                     </ul>
                 </div>
@@ -1065,6 +1262,13 @@
         });
         
         document.querySelectorAll('.profession-card').forEach(card => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(30px)";
+            card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+            observer.observe(card);
+        });
+        
+        document.querySelectorAll('.pricing-card').forEach(card => {
             card.style.opacity = "0";
             card.style.transform = "translateY(30px)";
             card.style.transition = "opacity 0.5s ease, transform 0.5s ease";
